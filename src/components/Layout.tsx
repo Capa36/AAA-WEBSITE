@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Brain, ChevronDown, Mail, Phone, Menu, X } from 'lucide-react';
+import { ChevronDown, Mail, Phone, Menu, X } from 'lucide-react';
 import backgroundPicture2 from '../assets/backgroundpicture2.jpg';
 
 const navItemStyles = `
