@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ArrowRight, Cpu, Building2, Users, ChevronRight } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Database, Building2, ChevronDown, Play, BookOpen, Users, Mail, Phone, Menu, X, ChevronRight } from 'lucide-react';
 import backgroundPicture from './assets/backgroundpicture.jpg';
+import backgroundPicture2 from './assets/backgroundpicture2.jpg';
 import { useParallax } from './hooks/useParallax';
 import { TypewriterText } from './components/TypewriterText';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
@@ -10,6 +11,8 @@ import picture1 from './assets/markets/picture1.jpg';
 import picture2 from './assets/markets/picture2.jpg';
 import picture3 from './assets/markets/picture3.jpg';
 import picture4 from './assets/markets/picture4.jpg';
+
+
 
 // First, let's define some consistent green colors we'll use:
 const theme = {
