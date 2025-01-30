@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ChevronDown, Mail, Phone, Menu, X } from 'lucide-react';
 import backgroundPicture2 from '../assets/backgroundpicture2.jpg';
@@ -13,7 +13,11 @@ const navItemStyles = `
   hover:bg-[#8A2BE2]/10 hover:shadow-[0_0_15px_rgba(138,43,226,0.5)]
 `;
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export const Layout = ({ children }: LayoutProps) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -52,7 +56,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     setActiveDropdown(null);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null);
